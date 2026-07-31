@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keys Film Production & Event Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"><img src="logo-white.png" alt="Keys Film"></a>
+  <button class="menu-btn" aria-label="Open menu">☰</button>
+  <nav>
+    <a href="#home">HOME</a><a href="about.html">ABOUT US</a>
+    <a href="#services">SERVICES <span>⌄</span></a><a href="#portfolio">PORTFOLIO</a>
+    <a href="#clients">CLIENTS</a><a href="#blog">BLOG</a><a href="#contact">CONTACT US</a>
+  </nav>
+  <a class="quote" href="#contact">GET A QUOTE</a>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2200&q=85')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2200&q=85')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=2200&q=85')"></div>
+  </div>
+  <button class="arrow left" onclick="prevSlide()">‹</button><button class="arrow right" onclick="nextSlide()">›</button>
+  <div class="hero-content">
+    <div class="eyebrow">WELCOME TO KEYS</div>
+    <div class="script">Imagine. Create. Celebrate.</div>
+    <h1>WE TURN IDEAS INTO<br><span>VISUAL STORIES &</span><br>GRAND <span>EVENTS</span></h1>
+    <p>Keys Film Production & Event Management Company<br>delivers creative solutions that connect brands with<br>people and moments with memories.</p>
+    <div class="actions"><a class="btn gold" href="#portfolio">VIEW PORTFOLIO</a><a class="btn outline" href="#contact">GET A QUOTE</a></div>
+  </div>
+  <div class="dots"><button class="active" onclick="goSlide(0)"></button><button onclick="goSlide(1)"></button><button onclick="goSlide(2)"></button></div>
+</section>
+
+<section id="services" class="services section">
+  <div class="section-kicker">OUR SERVICES</div><h2>What We Do</h2>
+  <div class="service-groups">
+    <div><h3>♧ &nbsp; FILM PRODUCTION</h3><div class="cards">
+      <article><b>▣</b><h4>Product Shoot</h4><p>High quality product photography & videography</p></article>
+      <article><b>▱</b><h4>Ad Shoot</h4><p>Creative ad films that communicate & convert</p></article>
+      <article><b>♣</b><h4>Line Production</h4><p>End-to-end production support & management</p></article>
+      <article><b>♙</b><h4>Casting Agency</h4><p>Find the right face for your brand</p></article>
+      <article><b>♫</b><h4>Music Video</h4><p>Conceptualise, shoot & produce stunning videos</p></article>
+      <article><b>▤</b><h4>Corporate Film</h4><p>Promotional films for your business & brand</p></article>
+    </div></div>
+    <div><h3>♧ &nbsp; EVENT MANAGEMENT</h3><div class="cards">
+      <article><b>♧</b><h4>Wedding Events</h4><p>Dream weddings, beautifully managed</p></article>
+      <article><b>▱</b><h4>Corporate Events</h4><p>Professional events that elevate your brand</p></article>
+      <article><b>▥</b><h4>Exhibitions</h4><p>Stall design, branding & exhibition management</p></article>
+      <article><b>▣</b><h4>Concerts & Shows</h4><p>Live concerts, celebrity shows & more</p></article>
+      <article><b>✧</b><h4>Brand Launches</h4><p>Product launches that create impact</p></article>
+      <article><b>♡</b><h4>Social Events</h4><p>Birthdays, parties & all social gatherings</p></article>
+    </div></div>
+  </div>
+</section>
+
+<section id="about" class="about section">
+ <div class="about-copy"><div class="section-kicker">ABOUT US</div><h2>Why Choose Keys?</h2><p>Established in 2015, Keys Film Production &amp; Academy has roots in Oshiwara, Mumbai, with a strong presence in Mumbai and Indore. Our company profile describes a creative, professional approach across media, entertainment, events and weddings.</p>
+ <ul><li>Experienced & Creative Team</li><li>End-to-End Solutions</li><li>High Quality Production</li><li>On Time Delivery</li><li>Pan India Services</li></ul><a class="btn outline" href="about.html">ABOUT US</a></div>
+ <div class="feature-grid">
+  <div class="feature" style="background-image:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=700&q=80')"><span>CREATIVE<br>VISION</span></div>
+  <div class="feature" style="background-image:url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=80')"><span>PERFECT<br>EXECUTION</span></div>
+  <div class="feature" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80')"><span>MEMORABLE<br>EXPERIENCES</span></div>
+  <div class="feature" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=700&q=80')"><span>PREMIUM<br>QUALITY</span></div>
+ </div>
+</section>
+
+<section id="portfolio" class="portfolio section">
+ <div class="section-kicker">OUR PORTFOLIO</div>
+ <div class="title-row"><div><h2>Our Real Work</h2><p class="portfolio-intro">A showcase of projects actually executed by the Keys team.</p></div></div>
+ <div class="portfolio-tabs" role="tablist">
+  <button class="portfolio-tab active" data-filter="all">ALL WORK</button>
+  <button class="portfolio-tab" data-filter="exhibition">EXHIBITION</button>
+  <button class="portfolio-tab" data-filter="wedding">WEDDING</button>
+ </div>
+ <div class="portfolio-block" data-category="exhibition">
+  <div class="portfolio-heading"><div><span class="portfolio-number">01</span><h3>Exhibition & Stall Projects</h3></div><p>Original exhibition and stall execution showcase.</p></div>
+  <div class="real-work-grid">
+   <figure><img src="assets/exhibition/exhibition-1.jpeg" alt="Kisan Group exhibition stall"><figcaption>Kisan Group — Exhibition Stall</figcaption></figure>
+   <figure><img src="assets/exhibition/exhibition-2.png" alt="Kisan Group exhibition project"><figcaption>Kisan Group — Event Showcase</figcaption></figure>
+   <figure><img src="assets/exhibition/exhibition-3.jpeg" alt="ASUS Intel exhibition stall"><figcaption>ASUS / Intel — Stall Project</figcaption></figure>
+   <figure><img src="assets/exhibition/exhibition-4.jpeg" alt="Exhibition stall project"><figcaption>Custom Exhibition Stall</figcaption></figure>
+   <figure><img src="assets/exhibition/exhibition-5.jpeg" alt="Exhibition stall project"><figcaption>Custom Stall Execution</figcaption></figure>
+   <figure><img src="assets/exhibition/exhibition-6.jpeg" alt="Exhibition stall project"><figcaption>Brand Exhibition Setup</figcaption></figure>
+   <figure><img src="assets/exhibition/exhibition-7.jpeg" alt="LG brand activation display"><figcaption>LG — Brand Display</figcaption></figure>
+   <figure><img src="assets/exhibition/exhibition-8.jpeg" alt="iBricx exhibition stall"><figcaption>iBricx — Exhibition Stall</figcaption></figure>
+   <figure><img src="assets/exhibition/exhibition-9.jpeg" alt="Redpine exhibition stall"><figcaption>Redpine — Exhibition Stall</figcaption></figure>
+  </div>
+ </div>
+ <div class="portfolio-block" data-category="wedding">
+  <div class="portfolio-heading"><div><span class="portfolio-number">02</span><h3>Wedding — Original Work Videos</h3></div><p>Real wedding work videos supplied for the website portfolio.</p></div>
+  <div class="video-grid">
+   <article class="work-video"><video controls preload="metadata" playsinline src="assets/wedding/wedding-1.mp4"></video><h4>Wedding Event — Video 01</h4></article>
+   <article class="work-video"><video controls preload="metadata" playsinline src="assets/wedding/wedding-2.mp4"></video><h4>Wedding Event — Video 02</h4></article>
+   <article class="work-video"><video controls preload="metadata" playsinline src="assets/wedding/wedding-3.mp4"></video><h4>Wedding Event — Video 03</h4></article>
+  </div>
+ </div>
+</section>
+
+<section class="stats"><div><strong>250+</strong><span>PROJECTS COMPLETED</span></div><div><strong>150+</strong><span>HAPPY CLIENTS</span></div><div><strong>10+</strong><span>YEARS OF EXPERIENCE</span></div><div><strong>50+</strong><span>TEAM MEMBERS</span></div></section>
+
+<section id="clients" class="testimonial section"><div class="quote-mark">“</div><div><div class="section-kicker">CLIENTS &amp; REFERENCES</div><h2>Trusted for Creative Execution</h2><p>Our company profile highlights a growing client base and numerous verifiable past satisfied clients. It also records corporate work and references across event and production assignments.</p><strong>KEYS FILM PRODUCTION &amp; EVENT MANAGEMENT</strong></div><div class="quote-mark">”</div></section>
+
+<section id="contact" class="cta"><h2>LET'S CREATE SOMETHING EXCEPTIONAL TOGETHER</h2><a class="btn outline" href="tel:7389536244">CONTACT US TODAY</a></section>
+</main>
+
+<footer id="blog"><div class="footer-brand"><img src="logo-white.png" alt="Keys Film"><p>We create stories. We design experiences.<br>We deliver memories.</p></div><div><h4>QUICK LINKS</h4><a href="#home">Home</a><a href="about.html">About Us</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#blog">Blog</a><a href="#contact">Contact Us</a></div><div><h4>OUR SERVICES</h4><a href="#services">Film Production</a><a href="#services">Event Management</a></div><div><h4>CONTACT INFO</h4><p>☎ 7389536244 / 7415066244</p><p>✉ keysfilmproductions@gmail.com</p><p>📍 Mumbai, Maharashtra, India</p></div><div class="copyright">© 2024 Keys Film Production & Event Management Company. All Rights Reserved.</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
