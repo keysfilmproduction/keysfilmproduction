@@ -92,3 +92,17 @@
 .portfolio-all-grid .work-video h4{font-size:11px;font-weight:500;color:#ccc;padding:12px;margin:0}
 @media(max-width:900px){.portfolio-all-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.portfolio-all-grid{grid-template-columns:1fr}.portfolio-all-grid figure img,.portfolio-all-grid .work-video video{height:220px}}
+
+/* FINAL PORTFOLIO + LOGO FIXES */
+.brand img, footer img{mix-blend-mode:normal;object-fit:contain}
+.brand img{width:170px;max-height:72px}
+.portfolio-all-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.portfolio-item{display:block;height:150px;background:#111;border:1px solid #252525;overflow:hidden}
+.portfolio-item img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.portfolio-item:hover img{transform:scale(1.04)}
+.portfolio-video{background:#111;border:1px solid #252525;overflow:hidden;height:150px}
+.portfolio-video video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+.portfolio-intro{margin-top:-12px!important}
+@media(max-width:1100px){.portfolio-all-grid{grid-template-columns:repeat(4,1fr)}.portfolio-item,.portfolio-video{height:135px}}
+@media(max-width:800px){.portfolio-all-grid{grid-template-columns:repeat(3,1fr)}.portfolio-item,.portfolio-video{height:125px}}
+@media(max-width:560px){.brand img{width:130px;max-height:52px}.portfolio-all-grid{grid-template-columns:repeat(2,1fr);gap:9px}.portfolio-item,.portfolio-video{height:115px}}
