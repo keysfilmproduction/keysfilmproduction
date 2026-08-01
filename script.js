@@ -20,28 +20,24 @@ if(menuBtn && nav){
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 }
 
-// Portfolio image lightbox with next/back buttons and touch swipe
+
+// Client review slider: one original screenshot at a time, auto-advancing.
 (function(){
-  const items=[...document.querySelectorAll('.portfolio-item[data-lightbox]')];
-  const box=document.getElementById('portfolioLightbox');
-  const image=document.getElementById('lightboxImage');
-  if(!items.length || !box || !image) return;
-  let currentIndex=0, startX=0, startY=0;
-  function show(i){
-    currentIndex=(i+items.length)%items.length;
-    image.src=items[currentIndex].dataset.lightbox;
-    box.classList.add('open'); box.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
+  const track=document.querySelector('.reviews-track');
+  const slides=[...document.querySelectorAll('.reviews-track img')];
+  const dots=[...document.querySelectorAll('.review-dots button')];
+  const prev=document.querySelector('.review-prev');
+  const next=document.querySelector('.review-next');
+  if(!track || !slides.length) return;
+  let i=0;
+  function show(n){
+    i=(n+slides.length)%slides.length;
+    track.style.transform='translateX(-'+(i*33.3333333333)+'%)';
+    dots.forEach((d,k)=>d.classList.toggle('active',k===i));
   }
-  function close(){box.classList.remove('open'); box.setAttribute('aria-hidden','true'); document.body.style.overflow=''; image.src='';}
-  function next(){show(currentIndex+1)}
-  function prev(){show(currentIndex-1)}
-  items.forEach((item,i)=>item.addEventListener('click',e=>{e.preventDefault();show(i)}));
-  box.querySelector('.lightbox-close').addEventListener('click',close);
-  box.querySelector('.lightbox-next').addEventListener('click',next);
-  box.querySelector('.lightbox-prev').addEventListener('click',prev);
-  box.addEventListener('click',e=>{if(e.target===box) close()});
-  document.addEventListener('keydown',e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev()});
-  image.addEventListener('touchstart',e=>{const t=e.changedTouches[0];startX=t.clientX;startY=t.clientY},{passive:true});
-  image.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-startX,dy=t.clientY-startY;if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)){dx<0?next():prev()}},{passive:true});
+  prev&&prev.addEventListener('click',()=>show(i-1));
+  next&&next.addEventListener('click',()=>show(i+1));
+  dots.forEach((d,k)=>d.addEventListener('click',()=>show(k)));
+  setInterval(()=>show(i+1),5000);
+  show(0);
 })();
