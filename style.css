@@ -106,3 +106,28 @@
 @media(max-width:1100px){.portfolio-all-grid{grid-template-columns:repeat(4,1fr)}.portfolio-item,.portfolio-video{height:135px}}
 @media(max-width:800px){.portfolio-all-grid{grid-template-columns:repeat(3,1fr)}.portfolio-item,.portfolio-video{height:125px}}
 @media(max-width:560px){.brand img{width:130px;max-height:52px}.portfolio-all-grid{grid-template-columns:repeat(2,1fr);gap:9px}.portfolio-item,.portfolio-video{height:115px}}
+
+/* FINAL HOME PAGE UPDATES */
+.portfolio-all-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px!important}
+.portfolio-item,.portfolio-video{height:92px!important;min-height:0!important;overflow:hidden!important}
+.portfolio-item img,.portfolio-video video{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}
+.reviews-image-section{text-align:center}
+.reviews-slider{width:min(680px,92%);margin:28px auto 0;overflow:hidden;background:#fff;border-radius:2px}
+.reviews-track{display:flex;width:300%;animation:reviewsAuto 15s infinite}
+.reviews-track img{width:33.333333%;height:auto;display:block;flex:0 0 33.333333%}
+@keyframes reviewsAuto{
+  0%,28%{transform:translateX(0)}
+  33%,61%{transform:translateX(-33.333333%)}
+  66%,94%{transform:translateX(-66.666666%)}
+  100%{transform:translateX(0)}
+}
+.country-flags{display:flex;gap:8px;align-items:center;margin-top:8px;font-size:18px;line-height:1}
+@media(max-width:900px){
+ .portfolio-all-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .portfolio-item,.portfolio-video{height:85px!important}
+}
+@media(max-width:600px){
+ .portfolio-all-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .portfolio-item,.portfolio-video{height:78px!important}
+ .reviews-slider{width:94%}
+}
