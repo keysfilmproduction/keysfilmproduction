@@ -131,3 +131,25 @@
  .portfolio-item,.portfolio-video{height:78px!important}
  .reviews-slider{width:94%}
 }
+
+/* FINAL LOCKED UPDATES */
+.services .cards article{position:relative;overflow:hidden;padding:0;min-height:210px;text-align:left;background:#101112;border:1px solid #282828}
+.services .cards article .service-image{display:block;width:100%;height:105px;object-fit:cover;opacity:.9;transition:transform .45s ease,opacity .45s ease}
+.services .cards article:hover .service-image{transform:scale(1.04);opacity:1}
+.services .cards article b{display:none}
+.services .cards article h4{font-size:14px;margin:14px 16px 7px}
+.services .cards article p{font-size:11px;margin:0 16px 16px;color:#999;line-height:1.5}
+.stats strong{font-size:38px}
+.reviews-slider{width:min(900px,94%);box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.reviews-track img{max-height:720px;object-fit:contain;background:#fff}
+.portfolio-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9999;display:none;align-items:center;justify-content:center;padding:60px 70px}
+.portfolio-lightbox.open{display:flex}
+.portfolio-lightbox img{max-width:88vw;max-height:84vh;object-fit:contain;touch-action:none;user-select:none}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;width:48px;height:48px;border-radius:50%;font-size:30px;cursor:pointer;z-index:2}
+.lightbox-close{top:22px;right:25px;font-size:32px}
+.lightbox-prev{left:22px;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:22px;top:50%;transform:translateY(-50%)}
+.portfolio-item{cursor:pointer}
+.country-flags{gap:7px;flex-wrap:wrap}
+@media(max-width:900px){.services .cards article{min-height:190px}.services .cards article .service-image{height:92px}.reviews-slider{width:94%}.stats strong{font-size:32px}}
+@media(max-width:560px){.services .cards article{min-height:170px}.services .cards article .service-image{height:78px}.services .cards article h4{font-size:12px;margin:10px 11px 5px}.services .cards article p{font-size:9px;margin:0 11px 11px}.reviews-slider{width:96%}.reviews-track img{max-height:600px}.portfolio-lightbox{padding:55px 42px}.portfolio-lightbox img{max-width:94vw;max-height:78vh}.lightbox-prev{left:7px}.lightbox-next{right:7px}.lightbox-close{right:10px}}
