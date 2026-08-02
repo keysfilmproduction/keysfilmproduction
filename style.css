@@ -173,3 +173,11 @@
  .cards article{min-height:190px!important}.cards article img{height:105px!important}
  .reviews-slider{width:98vw!important;gap:6px!important}.review-arrow{flex:0 0 34px!important;width:34px!important;height:34px!important;font-size:24px!important}
 }
+
+.quick-contact{display:flex;justify-content:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+.quick-contact-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border:1px solid rgba(212,175,85,.75);border-radius:4px;text-decoration:none;font-weight:600;letter-spacing:.4px;color:#fff;background:rgba(0,0,0,.35)}
+.social-icons{display:flex;gap:10px;margin:14px 0}
+.social-icons a{width:34px;height:34px;border:1px solid rgba(212,175,85,.7);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#d4af55;text-decoration:none;font-size:20px}
+.floating-contact{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;flex-direction:column;gap:10px}
+.floating-contact a{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid rgba(212,175,85,.8);background:#111;color:#fff;font-size:22px;box-shadow:0 5px 20px rgba(0,0,0,.25)}
+@media(max-width:600px){.floating-contact{right:12px;bottom:12px}.quick-contact-btn{width:100%;max-width:280px}}
