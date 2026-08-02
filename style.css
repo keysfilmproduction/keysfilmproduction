@@ -213,3 +213,14 @@
 .social-icons a svg{width:18px!important;height:18px!important;fill:currentColor!important;stroke:none!important}
 @media(max-width:900px){.template-review-layout{grid-template-columns:70px 34px minmax(0,1fr) 34px 70px;gap:6px!important}.review-side{height:180px}.template-review-layout .review-arrow{width:34px!important;height:34px!important;font-size:24px!important}}
 @media(max-width:600px){.template-review-layout{grid-template-columns:34px minmax(0,1fr) 34px;gap:5px!important}.template-review-layout .review-side{display:none}.review-side{height:170px}.quick-contact-btn{width:46px!important;height:46px!important}.social-icons a{width:34px!important;height:34px!important}}
+
+/* FINAL REFERENCE HERO + CLIENT LOVE LAYOUT */
+.hero-slide{background-position:center!important;background-size:cover!important}
+.template-review-layout .review-side{display:block!important;flex:0 0 18%!important;height:330px!important;border:1px solid #343434!important;overflow:hidden!important;background:#0b0b0b!important}
+.template-review-layout .review-side img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}
+.template-review-layout .reviews-viewport{flex:1 1 64%!important}
+.template-review-layout .reviews-track img{max-height:330px!important}
+@media(max-width:700px){
+ .template-review-layout .review-side{display:none!important}
+ .template-review-layout .reviews-viewport{flex:1 1 auto!important}
+}
