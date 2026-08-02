@@ -181,3 +181,44 @@
 .floating-contact{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;flex-direction:column;gap:10px}
 .floating-contact a{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid rgba(212,175,85,.8);background:#111;color:#fff;font-size:22px;box-shadow:0 5px 20px rgba(0,0,0,.25)}
 @media(max-width:600px){.floating-contact{right:12px;bottom:12px}.quick-contact-btn{width:100%;max-width:280px}}
+/* FINAL PROFESSIONAL CONTACT ICONS */
+.quick-contact{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:20px;flex-wrap:wrap}
+.quick-contact-btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:9px!important;min-width:155px;padding:12px 20px!important;border:1px solid #d4a72c!important;border-radius:3px!important;text-decoration:none!important;font-weight:600!important;letter-spacing:.04em!important;color:#fff!important;background:#090a0b!important;font-size:12px!important}
+.quick-contact-btn svg{width:18px;height:18px;fill:currentColor;stroke:currentColor;stroke-width:0;flex:0 0 18px}
+.quick-contact-btn:hover{background:#d4a72c!important;color:#111!important}
+.social-icons a svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7}
+.social-icons a svg .fill{fill:currentColor;stroke:none}
+.floating-contact a svg{width:22px;height:22px;fill:currentColor;stroke:currentColor;stroke-width:0}
+.floating-contact a{transition:.2s ease}
+.floating-contact a:hover{transform:translateY(-2px);border-color:#d4a72c;color:#d4a72c}
+.cards article img{object-fit:cover!important;object-position:center!important}
+.hero-slide{background-position:center!important}
+
+/* Client Love: template-style side visuals around the existing review slider.
+   No theme or services layout changes. */
+.reviews-with-side-images{
+  width:min(1500px,96vw)!important;
+  display:grid!important;
+  grid-template-columns:minmax(150px,1fr) 38px minmax(420px,760px) 38px minmax(150px,1fr);
+  align-items:center!important;
+  gap:14px!important;
+  margin:30px auto 0!important;
+}
+.reviews-with-side-images .reviews-viewport{grid-column:3; width:100%!important; flex:none!important;}
+.reviews-with-side-images .review-prev{grid-column:2;grid-row:1}
+.reviews-with-side-images .review-next{grid-column:4;grid-row:1}
+.review-side-image{height:300px;overflow:hidden;border:1px solid #2b2b2b;box-shadow:0 12px 35px rgba(0,0,0,.4);position:relative}
+.review-side-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.5));pointer-events:none}
+.review-side-image img{width:100%;height:100%;display:block;object-fit:cover}
+.review-side-left{grid-column:1;grid-row:1}
+.review-side-right{grid-column:5;grid-row:1}
+@media(max-width:1050px){
+ .reviews-with-side-images{grid-template-columns:34px minmax(360px,700px) 34px!important;max-width:780px!important}
+ .reviews-with-side-images .reviews-viewport{grid-column:2}
+ .reviews-with-side-images .review-prev{grid-column:1}
+ .reviews-with-side-images .review-next{grid-column:3}
+ .review-side-image{display:none}
+}
+@media(max-width:700px){
+ .reviews-with-side-images{width:98vw!important;grid-template-columns:34px minmax(0,1fr) 34px!important;gap:6px!important}
+}
