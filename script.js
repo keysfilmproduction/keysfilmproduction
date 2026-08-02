@@ -21,27 +21,6 @@ if(menuBtn && nav){
 }
 
 
-// Client review slider: one original screenshot at a time, auto-advancing.
-(function(){
-  const track=document.querySelector('.reviews-track');
-  const slides=[...document.querySelectorAll('.reviews-track img')];
-  const dots=[...document.querySelectorAll('.review-dots button')];
-  const prev=document.querySelector('.review-prev');
-  const next=document.querySelector('.review-next');
-  if(!track || !slides.length) return;
-  let i=0;
-  function show(n){
-    i=(n+slides.length)%slides.length;
-    track.style.transform='translateX(-'+(i*33.3333333333)+'%)';
-    dots.forEach((d,k)=>d.classList.toggle('active',k===i));
-  }
-  prev&&prev.addEventListener('click',()=>show(i-1));
-  next&&next.addEventListener('click',()=>show(i+1));
-  dots.forEach((d,k)=>d.addEventListener('click',()=>show(k)));
-  setInterval(()=>show(i+1),5000);
-  show(0);
-})();
-
 // FINAL review carousel: exactly ONE original review screenshot visible at a time.
 (function(){
   const track=document.querySelector('.reviews-track');
