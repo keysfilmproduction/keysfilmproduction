@@ -44,3 +44,43 @@ if(menuBtn && nav){
   track.parentElement.addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>45){render(index+(dx<0?1:-1));restart()}},{passive:true});
   render(0); restart();
 })();
+
+
+// Portfolio split: View More + click-to-enlarge image gallery.
+(function(){
+  const moreButtons=[...document.querySelectorAll('.portfolio-view-more')];
+  moreButtons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const category=btn.closest('.portfolio-category');
+      const hidden=[...category.querySelectorAll('.work-more-hidden')];
+      const expanded=category.classList.toggle('portfolio-expanded');
+      hidden.forEach(el=>el.style.display=expanded?'block':'none');
+      btn.textContent=expanded?'VIEW LESS':'VIEW MORE';
+    });
+  });
+
+  const box=document.getElementById('portfolioLightbox');
+  const image=box?.querySelector('.portfolio-lightbox-image');
+  if(!box || !image) return;
+  let gallery=[]; let index=0;
+  function render(n){
+    if(!gallery.length) return;
+    index=(n+gallery.length)%gallery.length;
+    image.src=gallery[index].href;
+    image.alt=gallery[index].querySelector('img')?.alt || 'Portfolio work';
+  }
+  function open(link){
+    const cat=link.closest('.portfolio-category');
+    gallery=[...cat.querySelectorAll('a[data-lightbox]')];
+    index=gallery.indexOf(link);
+    box.classList.add('open'); box.setAttribute('aria-hidden','false');
+    render(index); document.body.style.overflow='hidden';
+  }
+  function close(){box.classList.remove('open');box.setAttribute('aria-hidden','true');image.src='';document.body.style.overflow='';}
+  document.querySelectorAll('a[data-lightbox]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();open(link)}));
+  box.querySelector('.portfolio-lightbox-close')?.addEventListener('click',close);
+  box.querySelector('.portfolio-lightbox-prev')?.addEventListener('click',()=>render(index-1));
+  box.querySelector('.portfolio-lightbox-next')?.addEventListener('click',()=>render(index+1));
+  box.addEventListener('click',e=>{if(e.target===box) close()});
+  document.addEventListener('keydown',e=>{if(!box.classList.contains('open')) return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')render(index-1);if(e.key==='ArrowRight')render(index+1)});
+})();
