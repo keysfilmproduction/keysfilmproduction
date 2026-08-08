@@ -1,1 +1,0 @@
-Our Real Work now has ONE shared VIEW MORE button below both Film Production and Event Management. Clicking it expands both sides together while keeping the two-part layout. Wedding videos are included in Event Management and appear with the expanded work.
